@@ -1,0 +1,44 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Списки игроков двух команд</h2>
+<table class="table">
+    <tr>
+        <th>
+            Cleveland Cavaliers
+        </th>
+        <th>
+            Общий счёт
+        </th>
+    </tr>
+    @foreach (var p in ViewBag.CLE)
+    {
+        <tr>
+            <td>@p.PlayerName</td>
+            <td>@p.Score</td>
+        </tr>
+    }
+</table>
+
+<table class="table">
+    <tr>
+        <th>
+            Los Angeles Lakers
+        </th>
+        <th>
+            Общий счёт
+        </th>
+    </tr>
+    @foreach (var p in ViewBag.LAL)
+    {
+        <tr>
+            <td>@p.PlayerName</td>
+            <td>@p.Score</td>
+        </tr>
+    }
+</table>
+
+
